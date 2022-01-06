@@ -2024,7 +2024,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def get_top_referrers(self):
         """
-        :calls: `GET /repos/{owner}/{repo}/traffic/popular/referrers <https://docs.github.com/en/rest/reference/repos#traffic>`_
+        :calls: `GET /repos/{owner}/{repo}/traffic/popular/referrers <https://docs.github.com/en/rest/reference/repository-metrics#get-top-referral-sources>`_
         :rtype: :class:`list` of :class:`github.Referrer.Referrer`
         """
         headers, data = self._requester.requestJsonAndCheck(
@@ -2038,7 +2038,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def get_top_paths(self):
         """
-        :calls: `GET /repos/{owner}/{repo}/traffic/popular/paths <https://docs.github.com/en/rest/reference/repos#traffic>`_
+        :calls: `GET /repos/{owner}/{repo}/traffic/popular/paths <https://docs.github.com/en/rest/reference/repository-metrics#get-top-referral-paths>`_
         :rtype: :class:`list` of :class:`github.Path.Path`
         """
         headers, data = self._requester.requestJsonAndCheck(
@@ -2052,7 +2052,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def get_views_traffic(self, per=github.GithubObject.NotSet):
         """
-        :calls: `GET /repos/{owner}/{repo}/traffic/views <https://docs.github.com/en/rest/reference/repos#traffic>`_
+        :calls: `GET /repos/{owner}/{repo}/traffic/views <https://docs.github.com/en/rest/reference/repository-metrics#get-page-views>`_
         :param per: string, must be one of day or week, day by default
         :rtype: None or list of :class:`github.View.View`
         """
@@ -2078,7 +2078,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def get_clones_traffic(self, per=github.GithubObject.NotSet):
         """
-        :calls: `GET /repos/{owner}/{repo}/traffic/clones <https://docs.github.com/en/rest/reference/repos#traffic>`_
+        :calls: `GET /repos/{owner}/{repo}/traffic/clones <https://docs.github.com/en/rest/reference/repository-metrics#get-repository-clones>`_
         :param per: string, must be one of day or week, day by default
         :rtype: None or list of :class:`github.Clones.Clones`
         """
